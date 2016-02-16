@@ -1,7 +1,13 @@
 /* UVa problem: 11462 - Age Sort
  * Topic: Sorting
+ *
  * Brief problem description: 
- *   Given a list of ages, sort them in order from least to greates.
+ *   Given a list of ages, sort them in order from least to greatest.
+ *
+ * Solution Summary:
+ *
+ *   Read in a population and a number of ages, insert them into a vector 
+ *   and then sort. 
  */
 
 #include <iostream>

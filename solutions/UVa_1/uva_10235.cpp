@@ -1,7 +1,19 @@
 /* UVa problem: 10235 - Simply Emirps
  * Topic: Number Theory
+ *
  * Brief problem description: 
  *   Reverse a prime and see if that number is  prime.
+ *
+ * Solution Summary:
+ *   Reversed the number with some simple arithmetic operations using this logic: 
+ *   you find the remainder of a number when you % 10 it which decreases the number 
+ *   by a decimal place (17%10 -> 7). Now you multiply a new number (reverse) by 10 
+ *   to increase the decimal and add the remainder onto the end. Then you divide the 
+ *   original number by 10 and repeat this until your original number is 0. 
+ *   
+ *   ex) num=17, remainder=17%10=7, reverse=0*10=0+7 = 7, 17/10=1, 1%10 = 1, 
+ *   reverse = 7*10=70+1=71, 1/10 = 0 done
+ *
  */
 
 #include <iostream>
@@ -9,6 +21,7 @@ using namespace std;
 
 #define ONEPRIME 0
 
+//UALBERTA Code Archive
 int isPrime(int x){
   int i;
   if( x == 1 ) return ONEPRIME;

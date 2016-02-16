@@ -1,8 +1,15 @@
 /* UVa problem: 11152 - Colourful Flowers
  * Topic: Geometry
+ *
  * Brief problem description: 
  *   Find the incircle and circumcircle of a triangle when you are given the lengths
  *   of the triangles sides. Then find the area of each of these shapes. 
+ *
+ * Solution Summary:
+ *
+ *   You need to find the area of the triangle calculate the radius and area of the incircle
+ *   and circumcircle using known equations, and then subtracting the area of the triangle from the
+ *   circumcircle, and the area of the incircle from the triangle.
  */
 
 #include <iostream>
