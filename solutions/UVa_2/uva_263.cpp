@@ -27,13 +27,16 @@ void printThis(int a, int d, int diff) {
 
 int main() {
 	int orig;
+	int c = 0;
 
-	while ((cin >> orig) != 0) {
+	while (cin >> orig) {
+		if(orig == 0) break;
 		int count = 0;
 		cout << "Original number was " << orig << endl;
+		vector<int> chains;
 
 		while (true) {
-			vector<int> ascend, descend, chains;
+			vector<int> ascend, descend;
 			int diff = 0, AA = 0, DD = 0;
 
 			chains.push_back(orig);
@@ -58,7 +61,7 @@ int main() {
 			printThis(AA, DD, diff);
 
 			if (find(chains.begin(), chains.end(), diff) != chains.end()) { //found
-				cout << "Number of chains " << ++count << endl;
+				cout << "Chain length " << ++count << endl;
 				break;
 			} else {
 				chains.push_back(diff);
@@ -67,7 +70,7 @@ int main() {
 
 			orig = diff;
 		}
-
+		cout << endl;
 	}
 
 	return 0;
