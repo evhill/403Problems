@@ -43,6 +43,7 @@ struct Edge {
 vector<complex<double>> freckles;
 vector<Edge> edges;
 
+//Competitive Programming 3: page 54
 class UnionFind {
 private:
 	vector<int> p, rank;
@@ -101,7 +102,8 @@ int main() {
 		}
 
 		sort(edges.begin(), edges.end());
-
+		
+		//Competitive Programming: page 139
 		UnionFind UF(freckles.size());
 		for(int i = 0; i < edges.size(); i++){ //for each edge
 			Edge front = edges[i];
